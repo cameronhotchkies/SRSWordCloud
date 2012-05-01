@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7E11109B154F819F00CB7C67 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E11109A154F819F00CB7C67 /* Cocoa.framework */; };
+		7E1110A5154F819F00CB7C67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E1110A3154F819F00CB7C67 /* InfoPlist.strings */; };
+		7E1110A9154F819F00CB7C67 /* SRSWordCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1110A8154F819F00CB7C67 /* SRSWordCloud.m */; };
+		7E1110B1154F819F00CB7C67 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E1110B0154F819F00CB7C67 /* SenTestingKit.framework */; };
+		7E1110B2154F819F00CB7C67 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E11109A154F819F00CB7C67 /* Cocoa.framework */; };
+		7E1110B5154F819F00CB7C67 /* SRSWordCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E111097154F819F00CB7C67 /* SRSWordCloud.framework */; };
+		7E1110BB154F81A000CB7C67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E1110B9154F81A000CB7C67 /* InfoPlist.strings */; };
+		7E1110BE154F81A000CB7C67 /* SRSWordCloudTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1110BD154F81A000CB7C67 /* SRSWordCloudTests.m */; };
+		7E1110E0154F828500CB7C67 /* SRSWordCloudView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E1110DE154F828500CB7C67 /* SRSWordCloudView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E1110E1154F828500CB7C67 /* SRSWordCloudView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1110DF154F828500CB7C67 /* SRSWordCloudView.m */; };
+		7E1110F9154F88EA00CB7C67 /* SRSRankedWord.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E1110F7154F88EA00CB7C67 /* SRSRankedWord.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E1110FA154F88EA00CB7C67 /* SRSRankedWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1110F8154F88EA00CB7C67 /* SRSRankedWord.m */; };
+		7E111100154F907B00CB7C67 /* SRSWordCloud.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E1110A7154F819F00CB7C67 /* SRSWordCloud.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7E1110B3154F819F00CB7C67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E11108D154F819F00CB7C67 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E111096154F819F00CB7C67;
+			remoteInfo = SRSWordCloud;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7E111097154F819F00CB7C67 /* SRSWordCloud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SRSWordCloud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E11109A154F819F00CB7C67 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		7E11109D154F819F00CB7C67 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		7E11109E154F819F00CB7C67 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7E11109F154F819F00CB7C67 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7E1110A2154F819F00CB7C67 /* SRSWordCloud-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SRSWordCloud-Info.plist"; sourceTree = "<group>"; };
+		7E1110A4154F819F00CB7C67 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7E1110A6154F819F00CB7C67 /* SRSWordCloud-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SRSWordCloud-Prefix.pch"; sourceTree = "<group>"; };
+		7E1110A7154F819F00CB7C67 /* SRSWordCloud.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRSWordCloud.h; sourceTree = "<group>"; };
+		7E1110A8154F819F00CB7C67 /* SRSWordCloud.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRSWordCloud.m; sourceTree = "<group>"; };
+		7E1110AF154F819F00CB7C67 /* SRSWordCloudTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SRSWordCloudTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E1110B0154F819F00CB7C67 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		7E1110B8154F81A000CB7C67 /* SRSWordCloudTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SRSWordCloudTests-Info.plist"; sourceTree = "<group>"; };
+		7E1110BA154F81A000CB7C67 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7E1110BC154F81A000CB7C67 /* SRSWordCloudTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRSWordCloudTests.h; sourceTree = "<group>"; };
+		7E1110BD154F81A000CB7C67 /* SRSWordCloudTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRSWordCloudTests.m; sourceTree = "<group>"; };
+		7E1110DE154F828500CB7C67 /* SRSWordCloudView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRSWordCloudView.h; sourceTree = "<group>"; };
+		7E1110DF154F828500CB7C67 /* SRSWordCloudView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSWordCloudView.m; sourceTree = "<group>"; };
+		7E1110F7154F88EA00CB7C67 /* SRSRankedWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRSRankedWord.h; sourceTree = "<group>"; };
+		7E1110F8154F88EA00CB7C67 /* SRSRankedWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSRankedWord.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7E111093154F819F00CB7C67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E11109B154F819F00CB7C67 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E1110AB154F819F00CB7C67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E1110B1154F819F00CB7C67 /* SenTestingKit.framework in Frameworks */,
+				7E1110B2154F819F00CB7C67 /* Cocoa.framework in Frameworks */,
+				7E1110B5154F819F00CB7C67 /* SRSWordCloud.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7E11108B154F819F00CB7C67 = {
+			isa = PBXGroup;
+			children = (
+				7E1110A0154F819F00CB7C67 /* SRSWordCloud */,
+				7E1110B6154F81A000CB7C67 /* SRSWordCloudTests */,
+				7E111099154F819F00CB7C67 /* Frameworks */,
+				7E111098154F819F00CB7C67 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7E111098154F819F00CB7C67 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7E111097154F819F00CB7C67 /* SRSWordCloud.framework */,
+				7E1110AF154F819F00CB7C67 /* SRSWordCloudTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7E111099154F819F00CB7C67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E11109A154F819F00CB7C67 /* Cocoa.framework */,
+				7E1110B0154F819F00CB7C67 /* SenTestingKit.framework */,
+				7E11109C154F819F00CB7C67 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7E11109C154F819F00CB7C67 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E11109D154F819F00CB7C67 /* AppKit.framework */,
+				7E11109E154F819F00CB7C67 /* CoreData.framework */,
+				7E11109F154F819F00CB7C67 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		7E1110A0154F819F00CB7C67 /* SRSWordCloud */ = {
+			isa = PBXGroup;
+			children = (
+				7E1110A7154F819F00CB7C67 /* SRSWordCloud.h */,
+				7E1110A8154F819F00CB7C67 /* SRSWordCloud.m */,
+				7E1110A1154F819F00CB7C67 /* Supporting Files */,
+				7E1110DE154F828500CB7C67 /* SRSWordCloudView.h */,
+				7E1110DF154F828500CB7C67 /* SRSWordCloudView.m */,
+				7E1110F7154F88EA00CB7C67 /* SRSRankedWord.h */,
+				7E1110F8154F88EA00CB7C67 /* SRSRankedWord.m */,
+			);
+			path = SRSWordCloud;
+			sourceTree = "<group>";
+		};
+		7E1110A1154F819F00CB7C67 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7E1110A2154F819F00CB7C67 /* SRSWordCloud-Info.plist */,
+				7E1110A3154F819F00CB7C67 /* InfoPlist.strings */,
+				7E1110A6154F819F00CB7C67 /* SRSWordCloud-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7E1110B6154F81A000CB7C67 /* SRSWordCloudTests */ = {
+			isa = PBXGroup;
+			children = (
+				7E1110BC154F81A000CB7C67 /* SRSWordCloudTests.h */,
+				7E1110BD154F81A000CB7C67 /* SRSWordCloudTests.m */,
+				7E1110B7154F81A000CB7C67 /* Supporting Files */,
+			);
+			path = SRSWordCloudTests;
+			sourceTree = "<group>";
+		};
+		7E1110B7154F81A000CB7C67 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7E1110B8154F81A000CB7C67 /* SRSWordCloudTests-Info.plist */,
+				7E1110B9154F81A000CB7C67 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7E111094154F819F00CB7C67 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E1110E0154F828500CB7C67 /* SRSWordCloudView.h in Headers */,
+				7E1110F9154F88EA00CB7C67 /* SRSRankedWord.h in Headers */,
+				7E111100154F907B00CB7C67 /* SRSWordCloud.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7E111096154F819F00CB7C67 /* SRSWordCloud */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E1110C1154F81A000CB7C67 /* Build configuration list for PBXNativeTarget "SRSWordCloud" */;
+			buildPhases = (
+				7E111092154F819F00CB7C67 /* Sources */,
+				7E111093154F819F00CB7C67 /* Frameworks */,
+				7E111094154F819F00CB7C67 /* Headers */,
+				7E111095154F819F00CB7C67 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SRSWordCloud;
+			productName = SRSWordCloud;
+			productReference = 7E111097154F819F00CB7C67 /* SRSWordCloud.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7E1110AE154F819F00CB7C67 /* SRSWordCloudTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E1110C4154F81A000CB7C67 /* Build configuration list for PBXNativeTarget "SRSWordCloudTests" */;
+			buildPhases = (
+				7E1110AA154F819F00CB7C67 /* Sources */,
+				7E1110AB154F819F00CB7C67 /* Frameworks */,
+				7E1110AC154F819F00CB7C67 /* Resources */,
+				7E1110AD154F819F00CB7C67 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E1110B4154F819F00CB7C67 /* PBXTargetDependency */,
+			);
+			name = SRSWordCloudTests;
+			productName = SRSWordCloudTests;
+			productReference = 7E1110AF154F819F00CB7C67 /* SRSWordCloudTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7E11108D154F819F00CB7C67 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 7E111090154F819F00CB7C67 /* Build configuration list for PBXProject "SRSWordCloud" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7E11108B154F819F00CB7C67;
+			productRefGroup = 7E111098154F819F00CB7C67 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7E111096154F819F00CB7C67 /* SRSWordCloud */,
+				7E1110AE154F819F00CB7C67 /* SRSWordCloudTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7E111095154F819F00CB7C67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E1110A5154F819F00CB7C67 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E1110AC154F819F00CB7C67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E1110BB154F81A000CB7C67 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7E1110AD154F819F00CB7C67 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7E111092154F819F00CB7C67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E1110A9154F819F00CB7C67 /* SRSWordCloud.m in Sources */,
+				7E1110E1154F828500CB7C67 /* SRSWordCloudView.m in Sources */,
+				7E1110FA154F88EA00CB7C67 /* SRSRankedWord.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E1110AA154F819F00CB7C67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E1110BE154F81A000CB7C67 /* SRSWordCloudTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7E1110B4154F819F00CB7C67 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E111096154F819F00CB7C67 /* SRSWordCloud */;
+			targetProxy = 7E1110B3154F819F00CB7C67 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7E1110A3154F819F00CB7C67 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E1110A4154F819F00CB7C67 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7E1110B9154F81A000CB7C67 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E1110BA154F81A000CB7C67 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7E1110BF154F81A000CB7C67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7E1110C0154F81A000CB7C67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7E1110C2154F81A000CB7C67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SRSWordCloud/SRSWordCloud-Prefix.pch";
+				INFOPLIST_FILE = "SRSWordCloud/SRSWordCloud-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		7E1110C3154F81A000CB7C67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SRSWordCloud/SRSWordCloud-Prefix.pch";
+				INFOPLIST_FILE = "SRSWordCloud/SRSWordCloud-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		7E1110C5154F81A000CB7C67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SRSWordCloud/SRSWordCloud-Prefix.pch";
+				INFOPLIST_FILE = "SRSWordCloudTests/SRSWordCloudTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		7E1110C6154F81A000CB7C67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SRSWordCloud/SRSWordCloud-Prefix.pch";
+				INFOPLIST_FILE = "SRSWordCloudTests/SRSWordCloudTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7E111090154F819F00CB7C67 /* Build configuration list for PBXProject "SRSWordCloud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E1110BF154F81A000CB7C67 /* Debug */,
+				7E1110C0154F81A000CB7C67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E1110C1154F81A000CB7C67 /* Build configuration list for PBXNativeTarget "SRSWordCloud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E1110C2154F81A000CB7C67 /* Debug */,
+				7E1110C3154F81A000CB7C67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E1110C4154F81A000CB7C67 /* Build configuration list for PBXNativeTarget "SRSWordCloudTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E1110C5154F81A000CB7C67 /* Debug */,
+				7E1110C6154F81A000CB7C67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7E11108D154F819F00CB7C67 /* Project object */;
+}
