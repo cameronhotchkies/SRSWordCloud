@@ -19,16 +19,26 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "SRSRankedWord.h"
 
-@interface SRSWordCloudView : NSView
+@protocol SRSWordCloudViewDelegate <NSObject>
+
+- (NSMenu *)contextMenuForWord:(SRSRankedWord*)rankedWord;
+
+@end
+
+@interface SRSWordCloudView : NSView <NSTextViewDelegate>
 {
     NSMutableArray* wordList;
     NSMutableArray* wordSizes;
     CGRect ldRect;
+    NSMutableArray* redrawQueue;
 }
 
 @property (nonatomic, retain) NSMutableArray* wordList;
+@property (nonatomic, assign) id<SRSWordCloudViewDelegate> delegate;
 
 - (CGFloat)widthForText:(NSString*) text andFontSize:(CGFloat)size;
+- (void)buildWordLabels;
 
 @end

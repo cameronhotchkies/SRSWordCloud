@@ -22,7 +22,7 @@
 #import "SRSRankedWord.h"
 @implementation SRSWordCloudView
 
-@synthesize wordList;
+@synthesize wordList, delegate;
 
 - (void)setWordList:(NSMutableArray *)wl
 {
@@ -33,6 +33,7 @@
     
     wordList = [wl retain];
     ldRect = CGRectZero;
+    [self buildWordLabels];
     [self setNeedsDisplay:YES];
 }
 
@@ -42,22 +43,14 @@
     if (self) {
         // Initialization code here.
         ldRect = CGRectZero;
+        [self buildWordLabels];
     }
     
     return self;
 }
 
-- (void)drawRect:(NSRect)dirtyRect
+- (void)buildWordLabels
 {
-    if (CGRectEqualToRect(self.frame, ldRect) == YES)
-    {
-        return;
-    }
-    else 
-    {
-        ldRect = self.frame;
-    }
-    
     CGFloat startY = self.frame.size.height - 18;
     CGFloat runningX = 0;
     CGFloat runningY = startY;
@@ -70,8 +63,7 @@
     max = 0;
     
     CGFloat FONTMIN = 10;
-    CGFloat FONTMAX = 30;
-    CGFloat FONTSCALE = FONTMAX - FONTMIN;
+    CGFloat FONTMAX = 30; 
     
     for (SRSRankedWord* rw in self.wordList)
     {
@@ -90,12 +82,11 @@
     
     CGFloat constant = log(max - (min - 1))/ denom;
     
-    NSInteger scale = max - min;
     NSInteger nextLine = 18;
     
     NSInteger i = 0;
     
-    CGRect dr = dirtyRect;
+    //CGRect dr = dirtyRect;
     
     NSMutableArray* fs = nil;
     
@@ -131,25 +122,33 @@
             nextLine = fSize;
         }
         
-        CGFloat thisWidth = [self widthForText:rw.word andFontSize:fSize] + 10;
+        CGFloat thisWidth = [self widthForText:rw.word andFontSize:fSize] + 5;
         if (runningX + thisWidth > self.frame.size.width)
         {
             runningX = 0;
             runningY -= nextLine;
         }
-        CGRect rect = CGRectMake(runningX, runningY, 200, 18);
+        CGRect rect = CGRectMake(runningX, runningY, thisWidth+10, 18);
         
         NSTextView* rwv = [[NSTextView alloc] initWithFrame:rect];
         [rwv setString:rw.word];
         [rwv setBackgroundColor:[NSColor clearColor]];
         [rwv setTextColor:[NSColor whiteColor]];
-       
+        [rwv setEditable:NO];
+        
+        // Selection musst be enabled to allow for the menus. We disable it
+        // kind of using the textViewDidChangeSelection: selector.
+        //[rwv setSelectable:NO];
+
+        [rwv setDelegate:self];
         
         NSFont *f = [NSFont systemFontOfSize:fSize];
         
         [rwv setFont:f];
         
         [self addSubview:rwv];
+        
+        //NSLog(@"View Size: %lf, %lf", rwv.frame.size.width, rwv.frame.size.height);
         
         runningX += thisWidth;
     }
@@ -158,7 +157,99 @@
     {
         wordSizes = [fs retain];;
     }
+}
+
+// It's important that selected be on to allow menus, but 
+// The selection itself does us no good.
+- (void)textViewDidChangeSelection:(NSNotification *)notification
+{
+    NSTextView* tv = (NSTextView*) notification.object;
     
+    if (tv.selectedRange.length > 0)
+    {
+        tv.selectedRange = NSMakeRange(0, 0);
+    }
+}
+
+- (void)drawRect:(NSRect)dirtyRect
+{
+    if (CGRectEqualToRect(self.frame, ldRect) == YES)
+    {
+        return;
+    }
+    else 
+    {
+        ldRect = self.frame;
+    }
+    
+    CGFloat rX = 0;
+    CGFloat maxHeight = 18;
+    
+    CGFloat rY = self.frame.size.height;
+    
+    for (NSTextView* tv in self.subviews)
+    {
+        CGRect oldFrm = tv.frame;
+        id x = tv.delegate;
+        
+        if (rX + oldFrm.size.width > self.frame.size.width)
+        {
+            rX = 0;
+            rY -= maxHeight;
+            maxHeight = 18;
+        }
+        else 
+        {
+            if (oldFrm.size.height > maxHeight)
+            {
+                maxHeight = oldFrm.size.height;
+            }
+        }
+        
+        CGRect frm = CGRectMake(rX, 
+                                rY - maxHeight,
+                                oldFrm.size.width,
+                                oldFrm.size.height);
+        
+        tv.frame = frm;
+        
+        rX += oldFrm.size.width;
+    }
+}
+
+- (void)blerg:(id)sender
+{
+    int x= 2;
+}
+
+//- (NSMenu *)textView:(NSTextView *)view 
+//                menu:(NSMenu *)menu 
+//            forEvent:(NSEvent *)event 
+//             atIndex:(NSUInteger)charIndex
+- (NSMenu *)textView:(NSTextView *)view 
+                menu:(NSMenu *)menu 
+            forEvent:(NSEvent *)event 
+             atIndex:(NSUInteger)charIndex
+{
+    if (event.type == NSRightMouseDown)
+    {
+        if (self.delegate != nil && [self.delegate conformsToProtocol:@protocol(SRSWordCloudViewDelegate)])
+        {
+            SRSRankedWord* rWord = nil; // TODO: this
+            
+            for (SRSRankedWord* w in self.wordList)
+            {
+                if ([w.word isEqualToString:view.string])
+                {
+                    rWord = w;
+                }
+            }
+            
+            return [self.delegate contextMenuForWord:rWord];
+        }
+    }
+    
+    return nil;
 }
 
 - (CGFloat)widthForText:(NSString*) text andFontSize:(CGFloat)size
