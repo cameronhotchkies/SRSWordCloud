@@ -190,7 +190,6 @@
     for (NSTextView* tv in self.subviews)
     {
         CGRect oldFrm = tv.frame;
-        id x = tv.delegate;
         
         if (rX + oldFrm.size.width > self.frame.size.width)
         {
@@ -215,11 +214,6 @@
         
         rX += oldFrm.size.width;
     }
-}
-
-- (void)blerg:(id)sender
-{
-    int x= 2;
 }
 
 //- (NSMenu *)textView:(NSTextView *)view 
