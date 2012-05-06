@@ -219,6 +219,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Srs Biznas";
 			};
 			buildConfigurationList = 7E111090154F819F00CB7C67 /* Build configuration list for PBXProject "SRSWordCloud" */;
 			compatibilityVersion = "Xcode 3.2";
