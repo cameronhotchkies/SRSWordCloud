@@ -1,2 +1,5 @@
 syntax: glob
 SRSWordCloud/SRSWordCloud.xcodeproj/xcuserdata
+.DS_Store
+SRSWordCloud.xcodeproj/project.xcworkspace/xcuserdata/
+contents.xcworkspacedata
