@@ -239,7 +239,7 @@
                 }
             }
             
-            return [self.delegate contextMenuForWord:rWord];
+            return [self.delegate contextMenuForWord:rWord withView:view];
         }
     }
     

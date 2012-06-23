@@ -23,7 +23,7 @@
 
 @protocol SRSWordCloudViewDelegate <NSObject>
 
-- (NSMenu *)contextMenuForWord:(SRSRankedWord*)rankedWord;
+- (NSMenu *)contextMenuForWord:(SRSRankedWord*)rankedWord withView:(NSView*)view;
 
 @end
 
