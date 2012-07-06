@@ -3,7 +3,7 @@
 //  SRSWordCloud
 //
 //  Created by Cameron Hotchkies on 4/30/12.
-//  Copyright 2012 Srs Biznas. All rights reserved.
+//  Copyright 2012 Srs Biznas, LLC. All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -215,11 +215,7 @@
         rX += oldFrm.size.width;
     }
 }
-
-//- (NSMenu *)textView:(NSTextView *)view 
-//                menu:(NSMenu *)menu 
-//            forEvent:(NSEvent *)event 
-//             atIndex:(NSUInteger)charIndex
+ 
 - (NSMenu *)textView:(NSTextView *)view 
                 menu:(NSMenu *)menu 
             forEvent:(NSEvent *)event 
