@@ -218,6 +218,7 @@
 		7E11108D154F819F00CB7C67 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SRS;
 				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "Srs Biznas, LLC";
 			};
