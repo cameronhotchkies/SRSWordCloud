@@ -221,7 +221,9 @@
             forEvent:(NSEvent *)event 
              atIndex:(NSUInteger)charIndex
 {
-    if (event.type == NSRightMouseDown)
+    if (event.type == NSRightMouseDown ||
+        (event.type == NSLeftMouseDown && ([event modifierFlags] & NSControlKeyMask) > 0) // Ctrl-click
+        )
     {
         if (self.delegate != nil && [self.delegate conformsToProtocol:@protocol(SRSWordCloudViewDelegate)])
         {
