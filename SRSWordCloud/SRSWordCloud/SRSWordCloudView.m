@@ -20,6 +20,14 @@
 
 #import "SRSWordCloudView.h"
 #import "SRSRankedWord.h"
+
+@interface SRSWordCloudView ()
+
+- (CGFloat)widthForText:(NSString*) text andFontSize:(CGFloat)size;
+- (void)buildWordLabels;
+
+@end
+
 @implementation SRSWordCloudView
 
 @synthesize wordList, delegate;

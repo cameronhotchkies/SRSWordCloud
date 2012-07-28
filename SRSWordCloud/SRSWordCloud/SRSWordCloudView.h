@@ -38,7 +38,4 @@
 @property (nonatomic, retain) NSMutableArray* wordList;
 @property (nonatomic, assign) id<SRSWordCloudViewDelegate> delegate;
 
-- (CGFloat)widthForText:(NSString*) text andFontSize:(CGFloat)size;
-- (void)buildWordLabels;
-
 @end
